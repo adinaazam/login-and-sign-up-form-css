@@ -1,24 +1,36 @@
 
-body {
+* {
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  background: hsl(305, 93%, 40%);
+}
+
+body {
+  background: #a70999;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding: 50px 0;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
-  display: flex;
-  gap: 30px;
+  width: 350px;
+  position: relative;
 }
 
 .form-box {
-  background: #fff;
+  background: white;
   padding: 30px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+  transition: 0.3s;
 }
 
 .form-box h2 {
@@ -26,26 +38,52 @@ body {
   margin-bottom: 20px;
 }
 
-.form-box input {
+.form-box form input {
   width: 100%;
+  margin: 10px 0;
   padding: 12px;
-  margin-bottom: 15px;
   border-radius: 5px;
-  border: 1px solid #cccccc;
+  border: 1px solid #aaa;
 }
 
-.button {
-  display: block;
+.form-box button {
   width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #a7109f;
+  color: rgb(223, 214, 223);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-box p {
   text-align: center;
-  padding: 12px;
-  background: #ff00f2ff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
+  margin-top: 15px;
 }
 
-.button:hover {
-  background: #751c62;
+.form-box a {
+  color: blue;
+  text-decoration: none;
+}
+
+/* SHOW LOGIN BY DEFAULT */
+#login {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+/* WHEN URL TARGETS SIGNUP */
+#signup:target {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+/* HIDE LOGIN WHEN SIGNUP ACTIVE */
+#signup:target ~ #login {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
 }

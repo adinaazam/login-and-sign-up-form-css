@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,36 +8,47 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="container">
-   <div class="tabs">
-        <a href="#login" class="tab">Login</a>
-        <a href="#signup" class="tab">Sign Up</a>
+
+    <!-- LOGIN FORM -->
+    <div class="form-box" id="login">
+        <h2>Login</h2>
+
+        <form>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account?
+            <a href="#signup">Sign Up</a>
+        </p>
     </div>
 
-  <!-- Login Form -->
-  <div class="form-box">
-    <h2>Login</h2>
-    <input type="email" placeholder="Email"required>
-    <input type="password" placeholder="Password"required>
-    <a href="https://www.daraz.pk/" target="_blank" class="button">login</a>
-     <p>If you have an account, then 
-    <a href="https://www.daraz.pk/" target="_blank" class="link">login</a>
-  </p>
-  </div>
 
-  <!-- Signup Form -->
-  <div class="form-box">
-    <h2>Sign Up</h2>
-    <input type="text" placeholder="Name"required>
-    <input type="email" placeholder="Email"required>
-    <input type="password" placeholder="Password"required>
-    <input type="password" placeholder="Confirm Password"required>
-    <a href="https://www.daraz.pk/" target="_blank" class="button">Sign Up</a>
-  </div>
+    <!-- SIGNUP FORM -->
+    <div class="form-box" id="signup">
+        <h2>Sign Up</h2>
+
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Create Password" required>
+
+            <button type="submit">Create Account</button>
+        </form>
+
+        <p>Already have an account?
+            <a href="#login">Login</a>
+        </p>
+    </div>
 
 </div>
 
 </body>
 </html>
+
 
 
